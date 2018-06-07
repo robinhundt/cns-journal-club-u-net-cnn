@@ -1,0 +1,21 @@
+image: "node:latest"
+
+stages:
+- pages
+
+pages:
+  stage: pages
+  script:
+  - git clone https://github.com/hakimel/reveal.js.git
+  - yarn install
+  - yarn build
+  - mkdir public
+  - mv reveal.js/* public
+  - mv ressources index.html public/
+  artifacts:
+    paths:
+      - public/
+  only:
+    - master
+
+
