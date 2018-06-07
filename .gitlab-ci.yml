@@ -7,11 +7,12 @@ pages:
   stage: pages
   script:
   - git clone https://github.com/hakimel/reveal.js.git
-  - yarn install
-  - yarn build
   - mkdir public
   - mv reveal.js/* public
   - mv ressources index.html public/
+  - cd public
+  - yarn install
+  - yarn build
   artifacts:
     paths:
       - public/
