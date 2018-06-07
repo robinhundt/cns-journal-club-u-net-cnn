@@ -8,11 +8,9 @@ pages:
   script:
   - git clone https://github.com/hakimel/reveal.js.git
   - mkdir public
-  - mv reveal.js/* public
+  - mv reveal.js/{ressources,css,js,lib,plugin} public
   - mv ressources index.html public/
   - cd public
-  - yarn install
-  - yarn build
   artifacts:
     paths:
       - public/
