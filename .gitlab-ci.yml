@@ -1,4 +1,4 @@
-image: "bravissimolabs/docker-alpine-git:latest"
+image: "bravissimolabs/alpine-git:latest"
 
 stages:
 - pages
