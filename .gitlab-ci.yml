@@ -7,8 +7,8 @@ pages:
   stage: pages
   script:
   - git clone https://github.com/hakimel/reveal.js.git
-  - mkdir public
-  - mv reveal.js/{css,js,lib,plugin} public
+  - mkdir -p public/reveal.js
+  - mv reveal.js/{css,js,lib,plugin} public/reveal.js
   - mv ressources index.html public/
   - cd public
   artifacts:
